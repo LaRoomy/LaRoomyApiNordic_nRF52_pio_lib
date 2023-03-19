@@ -1,0 +1,178 @@
+#ifndef CONSTDEF_H
+#define CONSTDEF_H
+
+enum TransmissionSubType {
+    TST_NONE,
+    REQUEST,
+    RESPONSE,
+    COMMAND,
+    UPDATE,
+    INSERT,
+    REMOVE,
+    ENABLE,
+    DISABLE
+};
+
+enum PropertyType {
+    PTYPE_INVALID,
+    BUTTON ,
+    SWITCH,
+    LEVEL_SELECTOR,
+    LEVEL_INDICATOR,
+    TEXT_DISPLAY,
+    OPTION_SELECTOR,
+    RGB_SELECTOR,
+    EX_LEVEL_SELECTOR,
+    TIME_SELECTOR,
+    TIME_FRAME_SELECTOR,
+    DATE_SELECTOR,
+    UNLOCK_CONTROL,
+    NAVIGATOR,
+    BAR_GRAPH,
+    LINE_GRAPH,
+    STRING_INTERROGATOR,
+    TEXT_LIST_PRESENTER
+};
+
+enum UserMessageHoldingPeriod {
+    FIVE_SECONDS = 0,
+    SEVENpFIVE_SECONDS,
+    TEN_SECONDS,
+    TWELVEpFIVE_SECONDS,
+    FIFTEEN_SECONDS,
+    SEVENTEENpFIVE_SECONDS,
+    TWENTY_SECONDS,
+    INFINITE = 9 
+};
+
+enum UserMessageType {
+    Info,
+    Warning,
+    Error
+};
+
+enum RGBSelectorFlags {
+    RSF_HIDE_ON_OFF_BUTTON = 0x01,
+    RSF_HIDE_SINGLECOLOR_OR_TRANSITION_BUTTON = 0x02,
+    RSF_HIDE_INTENSITY_SLIDER = 0x04,
+    RSF_HIDE_SOFT_HARD_TRANSITION_SWITCH = 0x08
+};
+
+enum RGBColorTransitionProgram {
+    RCTP_NO_TRANSITION,
+    RCTP_SLOW_TRANSITION,
+    RCTP_SEMISLOW_TRANSITION,
+    RCTP_MEDIUM_TRANSITION,
+    RCTP_SEMIFAST_TRANSITION,
+    RCTP_FAST_TRANSITION
+};
+
+enum RGBTransitionType {
+    SOFT_TRANSITION,
+    HARD_TRANSITION
+};
+
+enum ExLevelSelectorFlags {
+    HIDE_ON_OFF_SWITCH = 0x01,
+    TRANSMIT_ONLY_START_END_TRACKING = 0x02
+};
+
+enum ExLevelTrackingType {
+    ELTT_UNUSED,
+    INTERTRACK,
+    START,
+    END
+};
+
+enum UnlockControlModes {
+    UNLOCK_MODE,
+    PIN_CHANGE_MODE
+};
+
+enum UnlockControlInvalidOperation {
+    UNLOCK_FAILED_WRONG_PIN,
+    PIN_CHANGE_REJECTED_WRONG_PIN
+};
+
+enum NavigatorButtonTypes {
+    UP_BUTTON = 0x01,
+    RIGHT_BUTTON = 0x02,
+    DOWN_BUTTON = 0x04,
+    LEFT_BUTTON = 0x08,
+    MID_BUTTON = 0x10,
+    NO_BUTTON = 0x20
+};
+
+enum NavigatorActionTypes {
+    NAT_UNUSED,
+    BTOUCHED_DOWN,
+    BRELEASED
+};
+
+enum BarGraphFlags {
+    USE_VALUE_AS_BARDESCRIPTOR = 0x01,
+    USE_FIXED_MAXIMUM_VALUE = 0x02
+};
+
+enum LineGraphFlags {
+    DRAW_GRID_LINES = 0x01,
+    DRAW_AXIS_VALUES = 0x02
+};
+
+enum LineGraphTransmissionTypes {
+    OVERRIDE_EXISTING_STATE,
+    UPDATE_EXISTING_STATE
+};
+
+enum BindingTransmissionTypes {
+    B_RELEASE,
+    B_ENABLE,
+    B_AUTH_REQUEST
+};
+
+typedef enum {
+    BINDING_ENABLE_SUCCESS,
+    BINDING_ENABLE_FAIL_NOT_SUPPORTED,
+    BINDING_ENABLE_FAIL_NO_KEY,
+    BINDING_RELEASE_SUCCESS,
+    BINDING_RELEASE_FAIL,
+    BINDING_AUTHENTICATION_SUCCESS,
+    BINDING_AUTHENTICATION_FAIL_WRONG_KEY,
+    BINDING_FAIL_NOT_IMPLEMENTED,
+    BINDING_ERROR_UNKNOWN_REQUEST,
+    BINDING_ERROR_UNKNOWN
+}BindingResponseType;
+
+enum PropertyLoadingType {
+    LOADED_FROM_CACHE,
+    LOADED_FROM_DEVICE
+};
+
+enum StringInterrogatorFieldInputType {
+    SI_INPUT_TEXT,
+    SI_INPUT_TEXT_PASSWORD,
+    SI_INPUT_NUMBER,
+    SI_INPUT_NUMBER_PASSWORD
+};
+
+enum TextListPresenterAction {
+    TLPA_NONE,
+    TLPA_ADD_TO_LIST,
+    TLPA_CLEAR_ALL
+};
+
+enum TextListPresenterElementType {
+    DEFAULT_MESSAGE,
+    INFO_MESSAGE,
+    WARNING_MESSAGE,
+    ERROR_MESSAGE
+};
+
+enum LineGraphGridShiftDirection {
+    LGS_SHIFT_X_AXIS_PLUS,
+    LGS_SHIFT_X_AXIS_MINUS,
+    LGS_SHIFT_Y_AXIS_PLUS,
+    LGS_SHIFT_Y_AXIS_MINUS
+};
+
+#endif
