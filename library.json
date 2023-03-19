@@ -12,7 +12,7 @@
     "repository":
     {
         "type": "git",
-        "url": "TODO: set rep url !!"
+        "url": "https://github.com/LaRoomy/LaRoomyApiNordic_nRF52_pio_lib"
     },
     "dependencies":
     {
