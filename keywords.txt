@@ -1,0 +1,7 @@
+# Syntax Coloring Map
+
+# Accessors (KEYWORD1)
+LaRoomyApi    KEYWORD1
+DeviceBindingController KEYWORD1
+PinStorageController KEYWORD1
+
