@@ -255,6 +255,7 @@ public:
     virtual void onDeviceConnectionRestored(cID currentOpenedPropertyPageID){}
     virtual void onBackNavigation(){}
     virtual void onComplexPropertyPageInvoked(cID propertyID){}
+    virtual void onDeviceSettingsPageInvoked(){}
     virtual void onTimeRequestResponse(unsigned int hours, unsigned int minutes, unsigned int seconds){}
     virtual void onDateRequestResponse(unsigned int day, unsigned int month, unsigned int year){}
     virtual void onLanguageRequestResponse(String langID){}
