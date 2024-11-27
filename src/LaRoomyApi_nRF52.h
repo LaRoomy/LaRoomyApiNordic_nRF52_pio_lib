@@ -2,7 +2,7 @@
 #ifndef ARDUINOBLE_LAROOMY_NRF_H
 #define ARDUINOBLE_LAROOMY_NRF_H
 
-#define LAROOMY_API_VERSION     "1.0.1"
+#define LAROOMY_API_VERSION     "1.0.2"
 
 /*  The LaRoomy Framework is made to quickly implement Bluetooth remote control capabilities
  *  to your project. It works in conjunction with the LaRoomy App
@@ -233,6 +233,7 @@ typedef struct _UIMODEDATA {
  */
 class ILaroomyAppCallback {
 public:
+    virtual ~ILaroomyAppCallback() = default;
     virtual void onConnectionStateChanged(bool newState){};
     virtual void onButtonPressed(cID buttonID){}
     virtual void onSwitchStateChanged(cID switchID, bool newState){}

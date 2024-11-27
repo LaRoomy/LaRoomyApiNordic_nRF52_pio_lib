@@ -1,6 +1,6 @@
 {
     "name": "LaRoomyApiNordicnRF52Lib",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "LaRoomy App remote framework to quickly implement remote control capabilities to embedded projects",
     "authors":
     {
